@@ -4,14 +4,16 @@ class Commune : Zone {
 
     var codePostal: Int? = null
     var wilayaId: Int? = null
+    var latLng: LatLng? = null
 
-    constructor(id: Int?, nomFr: String?, nomAr: String?, codePostal: Int?,wilayaId:Int) : super(
+    constructor(id: Int, nomAr: String?, nomFr: String?, latLng: LatLng?,codePostal: Int?, wilayaId: Int) : super(
         id,
-        nomFr,
-        nomAr
+        nomAr,
+        nomFr
 
     ) {
-        this.wilayaId = wilayaId
+        this.latLng = latLng
         this.codePostal = codePostal
+        this.wilayaId = wilayaId
     }
 }

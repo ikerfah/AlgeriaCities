@@ -1,11 +1,11 @@
 package com.ikerfah.algeriacities
 
 open class Zone {
-    var id: Int? = null
+    var id: Int
     var nomFr: String? = null
     var nomAr: String? = null
 
-    constructor(id: Int?, nomFr: String?, nomAr: String?) {
+    constructor(id: Int, nomAr: String?, nomFr: String?) {
         this.id = id
         this.nomFr = nomFr
         this.nomAr = nomAr
