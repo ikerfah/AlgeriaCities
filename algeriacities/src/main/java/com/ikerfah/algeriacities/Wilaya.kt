@@ -4,8 +4,8 @@ class Wilaya : Zone {
 
     constructor(
         id: Int,
-        nomFr: String?,
-        nomAr: String?
+        nomFr: String,
+        nomAr: String
     ) : super(
         id,
         nomFr,
