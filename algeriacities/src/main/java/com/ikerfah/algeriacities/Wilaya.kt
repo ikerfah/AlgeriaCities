@@ -2,20 +2,14 @@ package com.ikerfah.algeriacities
 
 class Wilaya : Zone {
 
-    var communes: List<Commune> = arrayListOf()
-
     constructor(
         id: Int?,
         nomFr: String?,
-        nomAr: String?,
-        codePostal: Int?,
-        communes: List<Commune>
+        nomAr: String?
     ) : super(
         id,
         nomFr,
-        nomAr,
-        codePostal
+        nomAr
     ) {
-        this.communes = communes
     }
 }
