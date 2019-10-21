@@ -10,7 +10,15 @@ class AlgeriaCities {
                 }
             }
             return null
+        }
 
+        fun getWilayaByName(name: String): Wilaya? {
+            for (wilaya in wilayas) {
+                if (wilaya.nomAr.equals(name,true) || wilaya.nomFr.equals(name,true)) {
+                    return wilaya
+                }
+            }
+            return null
         }
 
         fun getCommunesByWilayaId(id: Int): List<Commune> {
@@ -20,10 +28,9 @@ class AlgeriaCities {
                     tmp.add(commune)
                 }
             }
-
             return tmp
-
         }
+
 
         private val wilayas: List<Wilaya> = arrayListOf(
             Wilaya(1, "Adrar", "أدرار"),
