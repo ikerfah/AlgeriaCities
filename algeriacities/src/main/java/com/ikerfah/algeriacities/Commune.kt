@@ -2,10 +2,16 @@ package com.ikerfah.algeriacities
 
 class Commune : Zone {
 
-    constructor(id: Int?, nomFr: String?, nomAr: String?, codePostal: Int?) : super(
+    var codePostal: Int? = null
+    var wilayaId: Int? = null
+
+    constructor(id: Int?, nomFr: String?, nomAr: String?, codePostal: Int?,wilayaId:Int) : super(
         id,
         nomFr,
-        nomAr,
-        codePostal
-    )
+        nomAr
+
+    ) {
+        this.wilayaId = wilayaId
+        this.codePostal = codePostal
+    }
 }
