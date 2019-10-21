@@ -32,7 +32,7 @@ class AlgeriaCities {
         }
 
 
-        private val wilayas: List<Wilaya> = arrayListOf(
+        private val wilayas: List<Wilaya> by lazy {arrayListOf(
             Wilaya(1, "Adrar", "أدرار"),
             Wilaya(2, "Chlef", "الشلف"),
             Wilaya(3, "Laghouat", "الأغواط"),
@@ -81,9 +81,9 @@ class AlgeriaCities {
             Wilaya(46, "Aïn Témouchent", "عين تموشنت"),
             Wilaya(47, "Ghardaïa", "غرداية"),
             Wilaya(48, "Relizane", "غليزان")
-        )
+        )}
 
-        private val communes: List<Commune> = arrayListOf(
+        private val communes: List<Commune> by lazy { arrayListOf(
 
             Commune(1, "أدرار‎", "Adrar", LatLng("27.8745133", "-0.2842163"),1001, 1),
             Commune(2, "تامست", "Tamest", LatLng("27.4538889", "-0.2602777999999999"),1002, 1),
@@ -6067,6 +6067,6 @@ class AlgeriaCities {
                 48038,
                 48
             )
-        )
+        )}
     }
 }
