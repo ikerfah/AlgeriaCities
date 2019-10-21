@@ -1,0 +1,2 @@
+include ':app', ':algeriacities'
+rootProject.name='AlgeriaLibrary'
