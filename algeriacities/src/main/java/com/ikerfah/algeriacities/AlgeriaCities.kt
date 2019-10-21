@@ -251,7 +251,7 @@ class AlgeriaCities {
                 3
             ),
             Commune(71, "تاجموت", "Tadjmout", LatLng("33.8794929", "2.5272209"),3008, 3),
-            Commune(72, "El Kheneg", "Kheneg", LatLng("33.7453939", "2.7954106"),3009, 3),
+            Commune(72, "الخنق", "Kheneg", LatLng("33.7453939", "2.7954106"),3009, 3),
             Commune(
                 73,
                 "قلتة سيدي سعد",
@@ -259,7 +259,7 @@ class AlgeriaCities {
                 LatLng("34.2962822", "1.9416877"),3010,
                 3
             ),
-            Commune(74, "Ain Sidi Ali", "Ain Sidi Ali", LatLng("34.1508333", "1.545"),3011, 3),
+            Commune(74, "عين سيدي علي", "Ain Sidi Ali", LatLng("34.1508333", "1.545"),3011, 3),
             Commune(75, "بيضة", "Beidha", LatLng("34.472969", "2.17327"),3012, 3),
             Commune(76, "بريدة", "Brida", LatLng("33.9049713", "1.7842236"),3013, 3),
             Commune(77, "الغيشة", "El Ghicha", LatLng("33.9299401", "2.143796800000001"),3014, 3),
@@ -284,7 +284,7 @@ class AlgeriaCities {
                 3
             ),
             Commune(86, "الحوايطة", "El Houita", LatLng("33.649707", "2.4542"),3023, 3),
-            Commune(87, "N1A", "Sidi Bouzid", LatLng("34.3447424", "2.2640716"),3024, 3),
+            Commune(87, "سيدي بوزيد", "Sidi Bouzid", LatLng("34.3447424", "2.2640716"),3024, 3),
             Commune(88, "أم البواقي", "Oum El Bouaghi", LatLng("35.873056", "7.1197867"),4001, 4),
             Commune(
                 89,
@@ -296,12 +296,12 @@ class AlgeriaCities {
             Commune(90, "عين مليلة", "Ainmlila", LatLng("36.0189518", "6.5569882"),4003, 4),
             Commune(
                 91,
-                "b'hir el chergui",
+                "بحير شرقي",
                 "Behir Chergui",
                 LatLng("35.7940171", "7.7185878"),4004,
                 4
             ),
-            Commune(92, "W3", "El Amiria", LatLng("36.1101777", "6.904832099999999"),4005, 4),
+            Commune(92, "الاميرية", "El Amiria", LatLng("36.1101777", "6.904832099999999"),4005, 4),
             Commune(
                 93,
                 "سيقوس",
@@ -398,7 +398,7 @@ class AlgeriaCities {
             ),
             Commune(115, "اولاد قاسم", "Ouled Gacem", LatLng("35.870372", "7.111292"),4028, 4),
             Commune(116, "الحرملية", "El Harmilia", LatLng("35.9245726", "6.6223966"),4029, 4),
-            Commune(117, "BATNA", "Batna", LatLng("35.56851839999999", "6.1871735"),5001, 5),
+            Commune(117, "باتنة", "Batna", LatLng("35.56851839999999", "6.1871735"),5001, 5),
             Commune(118, "غسيرة", "Ghassira", LatLng("35.0777543", "6.216359699999999"),5002, 5),
             Commune(119, "معافة", "Maafa", LatLng("35.269936", "5.8775964"),5003, 5),
             Commune(120, "مروانة", "Merouana", LatLng("35.6287744", "5.9092754"),5004, 5),
@@ -568,7 +568,7 @@ class AlgeriaCities {
             ),
             Commune(
                 177,
-                "Batna",
+                "الاربعاء",
                 "Larbaa",
                 LatLng("35.54326799999999", "6.199772900000001"),5061,
                 5
@@ -1118,7 +1118,7 @@ class AlgeriaCities {
             Commune(362, "ان أمقل", "In Amguel", LatLng("24.4857286", "3.4195527"), 11009, 11),
             Commune(
                 363,
-                "Foggaret ez Zoua",
+                "فقارة الزاوية",
                 "Foggaret Ezzaouia",
                 LatLng("27.35923009999999", "2.845243899999999"),
                 11010,
@@ -1233,7 +1233,7 @@ class AlgeriaCities {
             Commune(393, "بني مستار", "Beni Mester", LatLng("34.8650364", "-1.4338047"), 13002, 13),
             Commune(
                 394,
-                "Ain Tellout",
+                "عين تيلوت",
                 "Ain Tallout",
                 LatLng("34.92211040000001", "-0.9557866999999998"),
                 13003,
@@ -1295,7 +1295,7 @@ class AlgeriaCities {
             Commune(420, "تونان", "Souahlia", LatLng("35.04059530000001", "-1.8952713"), 13029, 13),
             Commune(
                 421,
-                "Msirda Fouaka",
+                "مسيردة الفواقة",
                 "Msirda Fouaga",
                 LatLng("35.0160389", "-2.0518154"),
                 13030,
@@ -1438,7 +1438,7 @@ class AlgeriaCities {
                 14009,
                 14
             ),
-            Commune(454, "Route de Madna", "Madna", LatLng("34.8110952", "1.0028928"), 14010, 14),
+            Commune(454, "مادنا", "Madna", LatLng("34.8110952", "1.0028928"), 14010, 14),
             Commune(455, "سبت", "Sebt", LatLng("35.61805", "1.35317"), 14011, 14),
             Commune(456, "ملاكو", "Mellakou", LatLng("35.24978879999999", "1.2337661"), 14012, 14),
             Commune(457, "دحموني", "Dahmouni", LatLng("35.4157148", "1.4759356"), 14013, 14),
@@ -1498,7 +1498,7 @@ class AlgeriaCities {
             Commune(476, "تاقدمت", "Tagdemt", LatLng("35.3356113", "1.2283566"), 14032, 14),
             Commune(
                 477,
-                "Oued Lili",
+                "واد ليلى",
                 "Oued Lilli",
                 LatLng("35.51192899999999", "1.26705"),
                 14033,
@@ -1843,7 +1843,7 @@ class AlgeriaCities {
             ),
             Commune(
                 577,
-                "Bains Romains",
+                "باينز رومان",
                 "Bains Romains",
                 LatLng("36.8162039", "3.0019362"),
                 16024,
@@ -2008,7 +2008,7 @@ class AlgeriaCities {
             ),
             Commune(
                 623,
-                "Mliliha",
+                "المليحية",
                 "Mliliha",
                 LatLng("34.71330509999999", "3.766365699999999"),
                 17013,
@@ -2580,7 +2580,7 @@ class AlgeriaCities {
             ),
             Commune(
                 747,
-                "Ain Skhouna",
+                "عين سخونة",
                 "Ain Sekhouna",
                 LatLng("34.50444439999999", "0.8441666999999999"),
                 20013,
@@ -2735,7 +2735,7 @@ class AlgeriaCities {
             Commune(782, "قنواع", "Kanoua", LatLng("37.03767370000001", "6.4037428"), 21032, 21),
             Commune(
                 783,
-                "El-Ghadir",
+                "الغدير",
                 "El Ghedir",
                 LatLng("36.6867619", "6.975946800000001"),
                 21033,
@@ -3106,7 +3106,7 @@ class AlgeriaCities {
                 24009,
                 24
             ),
-            Commune(862, "N20", "Belkhir", LatLng("36.4735648", "7.7304778"), 24010, 24),
+            Commune(862, "بلخير", "Belkhir", LatLng("36.4735648", "7.7304778"), 24010, 24),
             Commune(
                 863,
                 "بن جراح",
@@ -3263,7 +3263,7 @@ class AlgeriaCities {
             ),
             Commune(
                 891,
-                "Rue Didouche Mourad ex rue de france",
+                "ديدوش مراد",
                 "Didouche Mourad",
                 LatLng("36.3680195", "6.6126546"),
                 25005,
@@ -3926,7 +3926,7 @@ class AlgeriaCities {
                 28
             ),
             Commune(1038, "عين الريش", "Ain Errich", LatLng("34.5751386", "4.028678"), 28044, 28),
-            Commune(1039, "N60", "Beni Ilmane", LatLng("35.9472217", "4.1195083"), 28045, 28),
+            Commune(1039, "بني يلمان", "Beni Ilmane", LatLng("35.9472217", "4.1195083"), 28045, 28),
             Commune(1040, "ولتام", "Oultene", LatLng("35.1170124", "4.2948884"), 28046, 28),
             Commune(
                 1041,
@@ -3958,7 +3958,7 @@ class AlgeriaCities {
             Commune(1047, "تيغنيف", "Teghennif", LatLng("35.4154336", "0.3296454"), 29006, 29),
             Commune(
                 1048,
-                "Vers El Hachem",
+                "الهاشم",
                 "El Hachem",
                 LatLng("35.41063580000001", "0.3789103"),
                 29007,
@@ -3974,12 +3974,12 @@ class AlgeriaCities {
                 29010,
                 29
             ),
-            Commune(1052, "Ain Farah", "Ain Ferah", LatLng("35.3811088", "0.7853763"), 29011, 29),
+            Commune(1052, "عين فراح", "Ain Ferah", LatLng("35.3811088", "0.7853763"), 29011, 29),
             Commune(1053, "غريس", "Ghriss", LatLng("35.2367082", "0.1682271"), 29012, 29),
             Commune(1054, "فروحة", "Froha", LatLng("35.3026637", "0.1282536"), 29013, 29),
             Commune(
                 1055,
-                "Vers Matemore",
+                "مطمور",
                 "Matemore",
                 LatLng("35.37425819999999", "0.1732144"),
                 29014,
@@ -4184,7 +4184,7 @@ class AlgeriaCities {
                 30019,
                 30
             ),
-            Commune(1108, "El Alia", "El Allia", LatLng("32.6999655", "5.4227567"), 30020, 30),
+            Commune(1108, "العالية", "El Allia", LatLng("32.6999655", "5.4227567"), 30020, 30),
             Commune(
                 1109,
                 "البرمة",
@@ -4846,7 +4846,7 @@ class AlgeriaCities {
             Commune(1256, "تيسمسيلت", "Tissemsilt", LatLng("35.6015182", "1.8074586"), 38001, 38),
             Commune(
                 1257,
-                "Bordj Bounaama",
+                "برج بونعامة",
                 "Bordj Bou Naama",
                 LatLng("35.8526248", "1.615375"),
                 38002,
@@ -4880,7 +4880,7 @@ class AlgeriaCities {
                 38009,
                 38
             ),
-            Commune(1265, "Layoune", "Layoune", LatLng("35.6887221", "1.9954938"), 38010, 38),
+            Commune(1265, "العيون", "Layoune", LatLng("35.6887221", "1.9954938"), 38010, 38),
             Commune(1266, "خميستى", "Khemisti", LatLng("35.6674352", "1.961246"), 38011, 38),
             Commune(
                 1267,
@@ -4902,7 +4902,7 @@ class AlgeriaCities {
             ),
             Commune(1271, "الأربعاء", "Larbaa", LatLng("35.914928", "1.47243"), 38016, 38),
             Commune(1272, "معاصم", "Maasem", LatLng("35.65868", "1.552266"), 38017, 38),
-            Commune(1273, "Sidi Abed", "Sidi Abed", LatLng("35.7422684", "1.7076637"), 38018, 38),
+            Commune(1273, "سيدي عابد", "Sidi Abed", LatLng("35.7422684", "1.7076637"), 38018, 38),
             Commune(1274, "تاملحت", "Tamalaht", LatLng("35.82348", "1.61306"), 38019, 38),
             Commune(1275, "الجزائر", "Sidi Slimane", LatLng("35.8651956", "1.6842771"), 38020, 38),
             Commune(1276, "بوقائد", "Boucaid", LatLng("35.8907698", "1.615375"), 38021, 38),
@@ -5001,7 +5001,7 @@ class AlgeriaCities {
             Commune(1299, "مرارة", "Mrara", LatLng("33.47042", "5.662538"), 39022, 39),
             Commune(
                 1300,
-                "Si Khelil",
+                "سيدي خليل",
                 "Sidi Khellil",
                 LatLng("33.8381481", "5.9607892"),
                 39023,
@@ -5009,7 +5009,7 @@ class AlgeriaCities {
             ),
             Commune(
                 1301,
-                "Tinedla",
+                "تندلة",
                 "Tendla",
                 LatLng("33.6745734", "6.033511400000001"),
                 39024,
@@ -5025,7 +5025,7 @@ class AlgeriaCities {
             ),
             Commune(
                 1303,
-                "Mih Ouensa",
+                "أميه ونسة",
                 "Mih Ouansa",
                 LatLng("33.197504", "6.707928700000001"),
                 39026,
@@ -5095,7 +5095,7 @@ class AlgeriaCities {
             ),
             Commune(
                 1331,
-                "Route de Hanancha",
+                "حنانشة",
                 "Hanancha",
                 LatLng("36.2627227", "7.769111"),
                 41003,
@@ -5104,7 +5104,7 @@ class AlgeriaCities {
             Commune(1332, "مشروحة", "Mechroha", LatLng("36.35", "7.83333"), 41004, 41),
             Commune(
                 1333,
-                "Ouled Driss Souk Ahras",
+                "أولاد دريس",
                 "Ouled Driss",
                 LatLng("36.35845899999999", "8.024135999999999"),
                 41005,
@@ -5123,7 +5123,7 @@ class AlgeriaCities {
             Commune(1337, "الدريعة", "Drea", LatLng("36.12162190000001", "7.8816843"), 41009, 41),
             Commune(
                 1338,
-                "Haddada",
+                "حدادة",
                 "Haddada",
                 LatLng("36.22984699999999", "8.333485099999999"),
                 41010,
@@ -5216,7 +5216,7 @@ class AlgeriaCities {
             ),
             Commune(
                 1354,
-                "Route de zouabi",
+                "الزوابى",
                 "Zouabi",
                 LatLng("35.95890070000001", "8.1409343"),
                 41026,
@@ -5343,7 +5343,7 @@ class AlgeriaCities {
                 43009,
                 43
             ),
-            Commune(1392, "Oued Endja", "Oued Endja", LatLng("36.5219186", "6.2092485"), 43010, 43),
+            Commune(1392, "واد النجاء", "Oued Endja", LatLng("36.5219186", "6.2092485"), 43010, 43),
             Commune(
                 1393,
                 "أحمد راشدي",
@@ -5651,13 +5651,13 @@ class AlgeriaCities {
             ),
             Commune(
                 1459,
-                "Mekmene Ben Amar",
+                "مكمن بن عمار",
                 "Makman Ben Amer",
                 LatLng("33.716667", "-0.7333329999999999"),
                 45010,
                 45
             ),
-            Commune(1460, "El Kasdir", "Kasdir", LatLng("33.713589", "-1.375755"), 45011, 45),
+            Commune(1460, "قصدير", "Kasdir", LatLng("33.713589", "-1.375755"), 45011, 45),
             Commune(1461, "البيوض", "El Biod", LatLng("33.7600866", "-0.1284404"), 45012, 45),
             Commune(
                 1462,
@@ -6010,7 +6010,7 @@ class AlgeriaCities {
             Commune(1531, "منداس", "Mendes", LatLng("35.6474585", "0.8651302999999999"), 48028, 48),
             Commune(
                 1532,
-                "Lahlaf",
+                "لحلاف",
                 "Lahlef",
                 LatLng("35.8921599", "0.9796769999999999"),
                 48029,
@@ -6046,7 +6046,7 @@ class AlgeriaCities {
             Commune(1539, "الولجة", "El Ouldja", LatLng("35.9072969", "1.1185143"), 48036, 48),
             Commune(
                 1540,
-                "Merdja Sidi Abed",
+                "مرجة سيدي عابد",
                 "Merdja Sidi Abed",
                 LatLng("36.0038889", "0.9947222000000001"),
                 48037,
