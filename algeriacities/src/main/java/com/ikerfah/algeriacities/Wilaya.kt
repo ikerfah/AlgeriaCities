@@ -8,11 +8,17 @@ class Wilaya : Zone {
         nomAr: String
     ) : super(
         id,
-        nomFr,
-        nomAr
+        nomAr,
+        nomFr
     )
 
     fun getCommunes(): List<Commune> {
         return AlgeriaCities.getCommunesByWilayaId(id)
     }
+
+    override fun toString(): String {
+        return nomFr!!
+    }
+
+
 }

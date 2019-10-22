@@ -20,4 +20,10 @@ class Commune : Zone {
     fun getWilaya(): Wilaya? {
         return AlgeriaCities.getWilayaById(wilayaId)
     }
+
+    override fun toString(): String {
+        return nomFr!!
+    }
+
+
 }
