@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WilayaSpinner">
+        <attr name="lang" format="enum">
+            <enum name="arabic" value="1"/>
+            <enum name="french" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>
