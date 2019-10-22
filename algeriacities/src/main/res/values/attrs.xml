@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <attr name="lang" format="enum">
+        <enum name="arabic" value="1" />
+        <enum name="french" value="2" />
+    </attr>
     <declare-styleable name="WilayaSpinner">
-        <attr name="lang" format="enum">
-            <enum name="arabic" value="1"/>
-            <enum name="french" value="2"/>
-        </attr>
+        <attr name="lang" />
+    </declare-styleable>
+
+    <declare-styleable name="CommuneSpinner">
+        <attr name="lang" />
     </declare-styleable>
 </resources>
