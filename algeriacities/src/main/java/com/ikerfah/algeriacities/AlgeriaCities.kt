@@ -21,7 +21,7 @@ class AlgeriaCities {
             return null
         }
 
-        fun getCommunesByWilayaId(id: Int): List<Commune> {
+        fun getCommunesByWilayaId(id: Int): ArrayList<Commune> {
             val tmp = arrayListOf<Commune>()
             for (commune in communes) {
                 if (commune.wilayaId == id) {
@@ -31,8 +31,12 @@ class AlgeriaCities {
             return tmp
         }
 
+        fun getAllWilaya():ArrayList<Wilaya>{
+            return wilayas
+        }
 
-        private val wilayas: List<Wilaya> by lazy {arrayListOf(
+
+        private val wilayas: ArrayList<Wilaya> by lazy {arrayListOf(
             Wilaya(1, "Adrar", "أدرار"),
             Wilaya(2, "Chlef", "الشلف"),
             Wilaya(3, "Laghouat", "الأغواط"),
@@ -83,7 +87,7 @@ class AlgeriaCities {
             Wilaya(48, "Relizane", "غليزان")
         )}
 
-        private val communes: List<Commune> by lazy { arrayListOf(
+        private val communes: ArrayList<Commune> by lazy { arrayListOf(
 
             Commune(1, "أدرار‎", "Adrar", LatLng("27.8745133", "-0.2842163"),1001, 1),
             Commune(2, "تامست", "Tamest", LatLng("27.4538889", "-0.2602777999999999"),1002, 1),
