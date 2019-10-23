@@ -1,4 +1,4 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import androidx.appcompat.widget.AppCompatTextView
+import com.ikerfah.algeriacities.R
+import com.ikerfah.algeriacities.models.Zone
 import kotlinx.android.synthetic.main.item_text.view.*
 
-class WilayaAdapter<T : Zone> : BaseAdapter {
+class ZoneAdapter<T : Zone> : BaseAdapter {
 
     companion object {
         val LANG_AR: String = "arabic"
@@ -36,7 +38,7 @@ class WilayaAdapter<T : Zone> : BaseAdapter {
             view.tag = viewHolder
         }else{
             view = convertView
-            viewHolder = convertView.tag as WilayaAdapter<T>.ViewHolder
+            viewHolder = convertView.tag as ViewHolder
         }
         viewHolder.name.text = if (lang == LANG_FR) mItems[position].nomFr else mItems[position].nomAr
         return view

@@ -1,8 +1,10 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.widgets
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.Spinner
+import com.ikerfah.algeriacities.AlgeriaCities
+import com.ikerfah.algeriacities.adapters.ZoneAdapter
 
 class WilayaSpinner : Spinner {
     private var mContext: Context? = null
@@ -55,18 +57,25 @@ class WilayaSpinner : Spinner {
 
 
     fun setup() {
-        var selectedLang: String? = WilayaAdapter.LANG_FR
-        if (attrs != null) {
-            for (i in 0..attrs?.attributeCount?.minus(1)!!) {
-                val name = attrs?.getAttributeName(i)
-                if (name == "lang") {
-                    selectedLang = attrs?.getAttributeValue(i)!!
+        try {
+            var selectedLang: String? = ZoneAdapter.LANG_FR
+            if (attrs != null) {
+                for (i in 0..attrs?.attributeCount?.minus(1)!!) {
+                    val name = attrs?.getAttributeName(i)
+                    if (name == "lang") {
+                        selectedLang = attrs?.getAttributeValue(i)!!
+                    }
                 }
             }
+            adapter = ZoneAdapter(
+                context,
+                AlgeriaCities.getAllWilaya(),
+                selectedLang
+            )
+        } catch (e: Exception) {
+            e.fillInStackTrace()
         }
 
-        val wilayas = WilayaAdapter(context, AlgeriaCities.getAllWilaya(), selectedLang)
-        adapter = wilayas
     }
 
 

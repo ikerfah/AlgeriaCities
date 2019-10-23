@@ -1,13 +1,13 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.widgets
 
-import android.R
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Spinner
-import android.widget.Toast
+import com.ikerfah.algeriacities.AlgeriaCities
+import com.ikerfah.algeriacities.adapters.ZoneAdapter
+import com.ikerfah.algeriacities.models.Wilaya
 
 class CommuneSpinner : Spinner {
     private var mContext: Context? = null
@@ -58,17 +58,20 @@ class CommuneSpinner : Spinner {
         setup()
     }
 
-    var selectedLang: String? = WilayaAdapter.LANG_FR
+    var selectedLang: String? = ZoneAdapter.LANG_FR
 
     fun setup() {
-
-        if (attrs != null) {
-            for (i in 0..attrs?.attributeCount?.minus(1)!!) {
-                val name = attrs?.getAttributeName(i)
-                if (name == "lang") {
-                    selectedLang = attrs?.getAttributeValue(i)!!
+        try {
+            if (attrs != null) {
+                for (i in 0..attrs?.attributeCount?.minus(1)!!) {
+                    val name = attrs?.getAttributeName(i)
+                    if (name == "lang") {
+                        selectedLang = attrs?.getAttributeValue(i)!!
+                    }
                 }
             }
+        } catch (e: Exception) {
+            e.fillInStackTrace()
         }
     }
 
@@ -78,20 +81,32 @@ class CommuneSpinner : Spinner {
     fun setParentSpinner(spinner: Spinner?) {
         parent = spinner
         if (parent != null) {
+            try {
+                parent?.onItemSelectedListener = object : OnItemSelectedListener {
+                    override fun onNothingSelected(p0: AdapterView<*>?) {
+                    }
 
-            parent?.onItemSelectedListener = object : OnItemSelectedListener {
-                override fun onNothingSelected(p0: AdapterView<*>?) {
-                }
+                    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                        if (parent != null) {
+                            val tmp = parent?.selectedItem as Wilaya
+                            try {
+                                adapter = ZoneAdapter(
+                                    context,
+                                    AlgeriaCities.getCommunesByWilayaId(
+                                        tmp.id
+                                    ),
+                                    selectedLang
+                                )
+                            } catch (e: Exception) {
+                                e.printStackTrace()
+                            }
 
-                override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                    if (parent != null) {
-                        val tmp = parent?.selectedItem as Wilaya
-                        val test = WilayaAdapter(context,AlgeriaCities.getCommunesByWilayaId(tmp.id),selectedLang)
-                        adapter = test
 
-
+                        }
                     }
                 }
+            } catch (e: Exception) {
+                e.printStackTrace()
             }
 
         }

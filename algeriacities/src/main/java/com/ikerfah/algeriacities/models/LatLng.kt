@@ -1,4 +1,4 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.models
 
 class LatLng {
     var latitude: String? = null
@@ -8,4 +8,10 @@ class LatLng {
         this.latitude = latitude
         this.longitude = longitude
     }
+
+    override fun toString(): String {
+        return "LatLng(latitude=$latitude, longitude=$longitude)"
+    }
+
+
 }

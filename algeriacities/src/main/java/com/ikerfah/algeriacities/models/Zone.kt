@@ -1,4 +1,4 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.models
 
 open class Zone {
     var id: Int

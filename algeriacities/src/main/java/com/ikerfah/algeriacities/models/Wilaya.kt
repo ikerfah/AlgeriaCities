@@ -1,4 +1,6 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.models
+
+import com.ikerfah.algeriacities.AlgeriaCities
 
 class Wilaya : Zone {
 

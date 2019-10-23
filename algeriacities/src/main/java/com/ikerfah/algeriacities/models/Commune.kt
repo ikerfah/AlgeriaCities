@@ -1,4 +1,6 @@
-package com.ikerfah.algeriacities
+package com.ikerfah.algeriacities.models
+
+import com.ikerfah.algeriacities.AlgeriaCities
 
 class Commune : Zone {
 
@@ -6,7 +8,7 @@ class Commune : Zone {
     var wilayaId: Int
     var latLng: LatLng? = null
 
-    constructor(id: Int, nomAr: String?, nomFr: String?, latLng: LatLng?,codePostal: Int?, wilayaId: Int) : super(
+    constructor(id: Int, nomAr: String?, nomFr: String?, latLng: LatLng?, codePostal: Int?, wilayaId: Int) : super(
         id,
         nomAr,
         nomFr
