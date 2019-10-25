@@ -9,6 +9,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import com.ikerfah.algeriacities.R
 import com.ikerfah.algeriacities.models.Zone
 import kotlinx.android.synthetic.main.item_text.view.*
+import java.util.*
 
 class ZoneAdapter<T : Zone> : BaseAdapter {
 
@@ -21,7 +22,7 @@ class ZoneAdapter<T : Zone> : BaseAdapter {
     private var mItems: ArrayList<T> = arrayListOf()
     private var lang: String = LANG_FR
 
-    constructor(context: Context, items: ArrayList<T>, defaultLanguage: String?) : super() {
+    constructor(context: Context, items: ArrayList<T>, defaultLanguage: String? = LANG_FR) : super() {
         this.mContext = context
         this.mItems = items
         this.lang = defaultLanguage?: LANG_FR
@@ -38,7 +39,7 @@ class ZoneAdapter<T : Zone> : BaseAdapter {
             view.tag = viewHolder
         }else{
             view = convertView
-            viewHolder = convertView.tag as ViewHolder
+            viewHolder = convertView.tag as ZoneAdapter<T>.ViewHolder
         }
         viewHolder.name.text = if (lang == LANG_FR) mItems[position].nomFr else mItems[position].nomAr
         return view
@@ -65,6 +66,5 @@ class ZoneAdapter<T : Zone> : BaseAdapter {
         }
 
     }
-
 
 }
