@@ -2,11 +2,38 @@ package com.ikerfah.algeriacities.widgets
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
+import android.widget.AdapterView
 import android.widget.Spinner
 import com.ikerfah.algeriacities.AlgeriaCities
 import com.ikerfah.algeriacities.adapters.ZoneAdapter
+import com.ikerfah.algeriacities.models.Commune
+import com.ikerfah.algeriacities.models.Wilaya
 
-class WilayaSpinner : Spinner {
+class WilayaSpinner : Spinner, AdapterView.OnItemSelectedListener {
+    override fun onNothingSelected(p0: AdapterView<*>?) {
+        listener?.onNothingSelected(p0)
+    }
+
+    override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+        if (communeSpinner != null) {
+            val selectedWilaya: Wilaya? = selectedItem as Wilaya
+            if (selectedWilaya != null) {
+                if (mContext != null) {
+                    communeSpinner!!.adapter = ZoneAdapter<Commune>(
+                        mContext!!,
+                        AlgeriaCities.getCommunesByWilayaId(selectedWilaya?.id)
+                    )
+                }
+
+            }
+
+
+        }
+        listener?.onItemSelected(p0, p1, p2, p3)
+    }
+
+
     private var mContext: Context? = null
     private var attrs: AttributeSet? = null
     private var mode: Int? = null
@@ -72,11 +99,24 @@ class WilayaSpinner : Spinner {
                 AlgeriaCities.getAllWilaya(),
                 selectedLang
             )
+
+
+            super.setOnItemSelectedListener(this)
         } catch (e: Exception) {
             e.fillInStackTrace()
         }
 
     }
 
+    private var listener: OnItemSelectedListener? = null
+    override fun setOnItemSelectedListener(listener: OnItemSelectedListener?) {
+        this.listener = listener
+    }
+
+
+    private var communeSpinner: CommuneSpinner? = null
+    fun attachCommuneSpinner(communeSpinner: CommuneSpinner?) {
+        this.communeSpinner = communeSpinner
+    }
 
 }
