@@ -1,5 +1,6 @@
 package com.ikerfah.algeriacities
 
+import com.ikerfah.algeriacities.helper.Validations
 import com.ikerfah.algeriacities.models.Commune
 import com.ikerfah.algeriacities.models.LatLng
 import com.ikerfah.algeriacities.models.Wilaya
@@ -8,40 +9,50 @@ class AlgeriaCities {
 
     companion object {
         /**
+         * @param wilayaId The desired wilaya identifier
          * @return Wilaya that match the id , or return null if non
          */
         fun getWilayaById(wilayaId: Int): Wilaya? {
+            if(Validations.isWilayaIdCorrect(wilayaId)){
             for (wilaya in wilayas) {
                 if (wilaya.id == wilayaId) {
                     return wilaya
                 }
-            }
+            }}
             return null
         }
 
         /**
-         * @param wilayaName It's can be french or arabic name
+         * @param wilayaName The desired wilaya name, It's can be french or arabic name
          * @return Wilaya that match the name , or return null if non
          */
         fun getWilayaByName(wilayaName: String): Wilaya? {
-            for (wilaya in wilayas) {
-                if (wilaya.nomAr.equals(wilayaName,true) || wilaya.nomFr.equals(wilayaName,true)) {
-                    return wilaya
+            if(Validations.isWilayaNameCorrect(wilayaName)) {
+                for (wilaya in wilayas) {
+                    if (wilaya.nomAr.equals(wilayaName, true) || wilaya.nomFr.equals(
+                            wilayaName,
+                            true
+                        )
+                    ) {
+                        return wilaya
+                    }
                 }
             }
             return null
         }
 
         /**
+         * @param wilayaId The desired wilaya identifier
          * @return ArrayList of commune that belong to the wilaya passed by param, This function return empty arraylist if non commune found
          */
         fun getCommunesByWilayaId(wilayaId: Int): ArrayList<Commune> {
             val tmp = arrayListOf<Commune>()
+            if(Validations.isWilayaIdCorrect(wilayaId)){
             for (commune in communes) {
                 if (commune.wilayaId == wilayaId) {
                     tmp.add(commune)
                 }
-            }
+            }}
             return tmp
         }
 
