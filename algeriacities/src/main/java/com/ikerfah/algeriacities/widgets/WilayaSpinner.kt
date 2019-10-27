@@ -27,8 +27,6 @@ class WilayaSpinner : Spinner, AdapterView.OnItemSelectedListener {
                 }
 
             }
-
-
         }
         listener?.onItemSelected(p0, p1, p2, p3)
     }
@@ -83,7 +81,7 @@ class WilayaSpinner : Spinner, AdapterView.OnItemSelectedListener {
     }
 
 
-    fun setup() {
+    private fun setup() {
         try {
             var selectedLang: String? = ZoneAdapter.LANG_FR
             if (attrs != null) {
@@ -101,10 +99,10 @@ class WilayaSpinner : Spinner, AdapterView.OnItemSelectedListener {
             )
 
 
-            super.setOnItemSelectedListener(this)
         } catch (e: Exception) {
             e.fillInStackTrace()
         }
+        super.setOnItemSelectedListener(this)
 
     }
 
@@ -115,6 +113,9 @@ class WilayaSpinner : Spinner, AdapterView.OnItemSelectedListener {
 
 
     private var communeSpinner: CommuneSpinner? = null
+    /**
+     *  @param communeSpinner : Commune Spinner widget that listen to wilaya spinner changes
+     */
     fun attachCommuneSpinner(communeSpinner: CommuneSpinner?) {
         this.communeSpinner = communeSpinner
     }
