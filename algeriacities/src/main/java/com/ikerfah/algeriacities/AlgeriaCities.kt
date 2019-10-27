@@ -7,34 +7,47 @@ import com.ikerfah.algeriacities.models.Wilaya
 class AlgeriaCities {
 
     companion object {
-        fun getWilayaById(id: Int): Wilaya? {
+        /**
+         * @return Wilaya that match the id , or return null if non
+         */
+        fun getWilayaById(wilayaId: Int): Wilaya? {
             for (wilaya in wilayas) {
-                if (wilaya.id == id) {
+                if (wilaya.id == wilayaId) {
                     return wilaya
                 }
             }
             return null
         }
 
-        fun getWilayaByName(name: String): Wilaya? {
+        /**
+         * @param wilayaName It's can be french or arabic name
+         * @return Wilaya that match the name , or return null if non
+         */
+        fun getWilayaByName(wilayaName: String): Wilaya? {
             for (wilaya in wilayas) {
-                if (wilaya.nomAr.equals(name,true) || wilaya.nomFr.equals(name,true)) {
+                if (wilaya.nomAr.equals(wilayaName,true) || wilaya.nomFr.equals(wilayaName,true)) {
                     return wilaya
                 }
             }
             return null
         }
 
-        fun getCommunesByWilayaId(id: Int): ArrayList<Commune> {
+        /**
+         * @return ArrayList of commune that belong to the wilaya passed by param, This function return empty arraylist if non commune found
+         */
+        fun getCommunesByWilayaId(wilayaId: Int): ArrayList<Commune> {
             val tmp = arrayListOf<Commune>()
             for (commune in communes) {
-                if (commune.wilayaId == id) {
+                if (commune.wilayaId == wilayaId) {
                     tmp.add(commune)
                 }
             }
             return tmp
         }
 
+        /**
+         * @return Return all wilaya list
+         */
         fun getAllWilaya():ArrayList<Wilaya>{
             return wilayas
         }
