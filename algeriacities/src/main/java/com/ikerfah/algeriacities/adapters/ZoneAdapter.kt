@@ -18,30 +18,34 @@ class ZoneAdapter<T : Zone> : BaseAdapter {
         val LANG_FR: String = "french"
     }
 
-    private var mContext:Context
+    private var mContext: Context
     private var mItems: ArrayList<T> = arrayListOf()
     private var lang: String = LANG_FR
 
-    constructor(context: Context, items: ArrayList<T>, defaultLanguage: String? = LANG_FR) : super() {
+    constructor(
+        context: Context,
+        items: ArrayList<T>,
+        defaultLanguage: String? = LANG_FR
+    ) : super() {
         this.mContext = context
         this.mItems = items
-        this.lang = defaultLanguage?: LANG_FR
+        this.lang = defaultLanguage ?: LANG_FR
     }
 
 
-
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view : View
-        val viewHolder : ViewHolder
+        val view: View
+        val viewHolder: ViewHolder
         if (convertView == null) {
             view = LayoutInflater.from(mContext).inflate(R.layout.item_text, parent, false)
             viewHolder = ViewHolder(view)
             view.tag = viewHolder
-        }else{
+        } else {
             view = convertView
             viewHolder = convertView.tag as ZoneAdapter<T>.ViewHolder
         }
-        viewHolder.name.text = if (lang == LANG_FR) mItems[position].nomFr else mItems[position].nomAr
+        viewHolder.name.text =
+            if (lang == LANG_FR) mItems[position].nomFr else mItems[position].nomAr
         return view
     }
 
@@ -58,10 +62,10 @@ class ZoneAdapter<T : Zone> : BaseAdapter {
         return if (mItems != null) mItems.size else 0
     }
 
-    private inner class ViewHolder{
-         var name : AppCompatTextView
+    private inner class ViewHolder {
+        var name: AppCompatTextView
 
-         constructor(row: View){
+        constructor(row: View) {
             name = row.text_name
         }
 
