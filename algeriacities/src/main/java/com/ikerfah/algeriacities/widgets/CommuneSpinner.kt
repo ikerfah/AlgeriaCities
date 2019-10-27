@@ -70,7 +70,7 @@ class CommuneSpinner : Spinner, AdapterView.OnItemSelectedListener {
     }
 
 
-    fun setup() {
+    private fun setup() {
         try {
             if (attrs != null) {
                 for (i in 0..attrs?.attributeCount?.minus(1)!!) {
@@ -93,12 +93,15 @@ class CommuneSpinner : Spinner, AdapterView.OnItemSelectedListener {
         this.listener = listener
     }
 
-    fun setWilayaId(id: Int) {
+    /**
+     * @param wilayaId Wilaya id to populate the spinner
+     */
+    fun setWilayaId(wilayaId: Int) {
         try {
             adapter = ZoneAdapter(
                 context,
                 AlgeriaCities.getCommunesByWilayaId(
-                    id
+                    wilayaId
                 ),
                 selectedLang
             )
