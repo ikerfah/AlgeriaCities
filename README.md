@@ -7,7 +7,7 @@ Android library that help with manipulating cities in algeria.
 # Download!
 
 ```
-implementation 'com.github.ikerfah:AlgeriaCities:0.1'
+implementation 'com.github.ikerfah:AlgeriaCities:0.2'
 ```
 ### Functions
 
