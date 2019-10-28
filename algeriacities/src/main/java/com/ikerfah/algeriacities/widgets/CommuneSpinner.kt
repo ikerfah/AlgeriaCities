@@ -7,14 +7,24 @@ import android.widget.AdapterView
 import android.widget.Spinner
 import com.ikerfah.algeriacities.AlgeriaCities
 import com.ikerfah.algeriacities.adapters.ZoneAdapter
+import com.ikerfah.algeriacities.helper.OnZoneItemSelected
+import com.ikerfah.algeriacities.models.Commune
 
 class CommuneSpinner : Spinner, AdapterView.OnItemSelectedListener {
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        listener?.onNothingSelected(p0)
+        communeListener?.onNothingSelected(p0)
     }
 
     override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-        listener?.onItemSelected(p0, p1, p2, p3)
+        var selectedCommune: Commune? = null
+        try {
+            selectedCommune = selectedItem as Commune
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+
+            communeListener?.onItemSelected(selectedCommune, p0, p1, p2, p3)
+        }
 
     }
 
@@ -86,9 +96,10 @@ class CommuneSpinner : Spinner, AdapterView.OnItemSelectedListener {
     }
 
 
-    private var listener: OnItemSelectedListener? = null
-    override fun setOnItemSelectedListener(listener: OnItemSelectedListener?) {
-        this.listener = listener
+
+    private var communeListener: OnZoneItemSelected<Commune>? = null
+    fun setOnZoneItemSelectedListener(listener: OnZoneItemSelected<Commune>?) {
+        this.communeListener = listener
     }
 
     /**
@@ -105,6 +116,17 @@ class CommuneSpinner : Spinner, AdapterView.OnItemSelectedListener {
             )
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    fun getSelectedCommune(): Commune? {
+        var selectedCommune: Commune? = null
+        try {
+            selectedCommune = selectedItem as Commune
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            return selectedCommune
         }
     }
 
