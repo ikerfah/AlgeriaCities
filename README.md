@@ -29,8 +29,9 @@ implementation 'com.github.ikerfah:AlgeriaCities:0.1'
 | CommuneSpinner | Spinner with predefined commune for selected wilaya from WilayaSpinner **Check attachCommuneSpinner** |
 
 ###### Tips and tricks 
-Use ```wilayaSpinner.attachCommuneSpinner(CommuneSpinner)```
+* Use ```wilayaSpinner.attachCommuneSpinner(CommuneSpinner)```
 Then the communeSpinner will change automatically when the wilaya changed
+* use ```setOnZoneItemSelectedListener``` for both Wilaya/Commune spinner and get selected wilaya/commune as first parameter along with other default parameters such as position
 ###### Example
 
 ```
