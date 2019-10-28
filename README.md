@@ -5,7 +5,17 @@ Android library that help with manipulating cities in algeria.
 
 
 # Download!
+Add it in your root build.gradle at the end of repositories:
 
+```
+allprojects {
+        repositories {
+	        ...
+		maven { url 'https://jitpack.io' }
+	}
+}
+```
+and then
 ```
 implementation 'com.github.ikerfah:AlgeriaCities:0.2'
 ```
@@ -28,10 +38,7 @@ implementation 'com.github.ikerfah:AlgeriaCities:0.2'
 | WilayaSpinner | Spinner with predefined wilaya list |
 | CommuneSpinner | Spinner with predefined commune for selected wilaya from WilayaSpinner **Check attachCommuneSpinner** |
 
-###### Tips and tricks 
-* Use ```wilayaSpinner.attachCommuneSpinner(CommuneSpinner)```
-Then the communeSpinner will change automatically when the wilaya changed
-* use ```setOnZoneItemSelectedListener``` for both Wilaya/Commune spinner and get selected wilaya/commune as first parameter along with other default parameters such as position
+
 ###### Example
 
 ```
@@ -49,7 +56,29 @@ Then the communeSpinner will change automatically when the wilaya changed
         android:layout_height="wrap_content"
         app:lang="french"/>
 ```
+###### Tips and tricks 
+* Use ```wilayaSpinner.attachCommuneSpinner(CommuneSpinner)```
+Then the communeSpinner will change automatically when the wilaya changed
+* use ```setOnZoneItemSelectedListener``` for both Wilaya/Commune spinner and get selected wilaya/commune as first parameter along with other default parameters such as position
 
+###### Example
+```
+spinner.setOnZoneItemSelectedListener(object: OnZoneItemSelected<Wilaya>{
+            override fun onItemSelected(
+                selectedZone: Wilaya?,
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                Toast.makeText(parent?.context, selectedZone?.nomFr, Toast.LENGTH_SHORT).show()
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+            }
+
+        })
+```
 ### XML Attributes (only with WilayaSpinner and CommuneSpinner)
 
 | Name | Description | Values |
